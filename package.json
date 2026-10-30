@@ -1,6 +1,9 @@
+
 {
   "name": "dj-api-proxy",
   "version": "1.0.0",
-  "private": true,
-  "type": "module"
+  "type": "module",
+  "scripts": {
+    "start": "node api/index.js"
+  }
 }
