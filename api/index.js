@@ -54,7 +54,10 @@ export default async function handler(request) {
   let randomIP = null;
   let cidr = null;
 
-  const url = new URL(request.url);
+  const url = new URL(
+  request.url,
+  `https://${request.headers.get('host') || 'localhost'}`
+);
   const id = url.searchParams.get('id');
   const debug = url.searchParams.get('debug') === '1';
 
